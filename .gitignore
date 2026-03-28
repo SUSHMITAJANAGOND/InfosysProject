@@ -1,0 +1,9 @@
+.metadata/
+node_modules/
+bin/
+target/
+*.log
+*.class
+*.jar
+*.war
+.DS_Store

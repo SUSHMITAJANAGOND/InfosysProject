@@ -1,0 +1,1031 @@
+/* ===============================
+   GLOBAL PAGE STYLE 
+=================================*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   LOGIN PAGE BACKGROUND
+=================================*/
+.login-page {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background Image Layer */
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);         /* Adjust blur here */
+  transform: scale(1.05);    /* Prevent white edges after blur */
+  z-index: -2;
+}
+
+/* Optional dark overlay for readability */
+.login-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);   /* Adjust darkness */
+  z-index: -1;
+}
+
+/* ===============================
+   LOGIN CARD
+=================================*/
+.login-card {
+  border-radius: 20px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+  padding: 20px;
+}
+
+/* ===============================
+   INPUT FIELDS
+=================================*/
+.modern-input {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.modern-input:focus {
+  border-color: #c6a7e5;
+  box-shadow: 0 0 10px rgba(202, 181, 223, 0.4);
+  outline: none;
+}
+
+/* ===============================
+   LOGIN BUTTON
+=================================*/
+.btn-gradient {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   REGISTER BUTTON
+=================================*/
+.btn-outline-danger {
+  border-radius: 10px;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.btn-outline-danger:hover {
+  background-color: #e47984;
+  color: white;
+}
+
+/* ===============================
+   TEXT STYLING
+=================================*/
+.text-primary {
+  color: #5a4fcf !important;
+}
+
+.text-muted {
+  font-size: 14px;
+}
+
+/* ===============================
+   ERROR MESSAGE
+=================================*/
+.text-danger {
+  font-size: 14px;
+}
+
+/* ===============================
+   ANIMATION
+=================================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.login-heading {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-subheading {
+  color: #5a4fcf;
+}
+
+
+
+
+.register-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Blurred Background Layer */
+.register-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);       /* Adjust blur here */
+  transform: scale(1.05);  /* Prevent white edges after blur */
+  z-index: 0;
+}
+
+.register-card {
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.register-heading {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.modern-input {
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.modern-input:focus {
+  border-color: #c6a7e5;
+  box-shadow: 0 0 10px rgba(202, 181, 223, 0.4);
+  outline: none;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+/* ===============================
+   PAGE STRUCTURE
+=================================*/
+.admin-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+.admin-header {
+  background-color: #0d9db6;   /* Bold dark red */
+  padding: 20px;
+  text-align: center;
+}
+
+.admin-title {
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ===============================
+   NAVBAR (Compact Version)
+=================================*/
+.admin-navbar-wrapper {
+  background-color: #c1d5f0;   /* Light nude red */
+  padding: 4px 0;   /* reduced from 10px */
+}
+
+.admin-navbar {
+  background: transparent !important;
+  padding: 2px 8px !important;   /* reduced inner spacing */
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 15px;   /* reduced spacing */
+  font-size: 14px;  /* slightly smaller text */
+  padding: 4px 6px; /* reduced height */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-toggle:hover {
+  color: #8bb8dc !important;
+}
+
+.logout-link {
+  font-weight: bold;
+}
+/* ===============================
+   IMAGE SECTION (Middle)
+=================================*/
+.admin-image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blurred Background Layer */
+.admin-image-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);      /* Increase or decrease blur here */
+  transform: scale(1.05); /* Prevent edge cutting after blur */
+  z-index: 0;
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+.admin-footer {
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+}
+
+
+
+
+/* ===============================
+   PAGE STRUCTURE
+=================================*/
+.student-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+.student-header {
+  background-color: #0d9db6;   /* Soft purple */
+  padding: 15px;
+  text-align: center;
+}
+
+.student-title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ===============================
+   NAVBAR (Compact Version)
+=================================*/
+.student-navbar-wrapper {
+  background-color: #c1d5f0;
+  padding: 4px 0;   /* reduced from 8px */
+}
+
+.student-navbar {
+  background: transparent !important;
+  padding: 2px 8px !important;   /* slightly reduced */
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 15px;   /* reduced spacing */
+  font-size: 14px;  /* slightly smaller text */
+  padding: 4px 6px; /* reduced vertical height */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-toggle:hover {
+  color: #4b0082 !important;
+}
+
+.logout-link {
+  font-weight: bold;
+}
+
+/* ===============================
+   IMAGE SECTION
+=================================*/
+.student-image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-image-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+.student-footer {
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+}
+
+
+
+
+/* ===============================
+   PAGE STRUCTURE
+=================================*/
+.lost-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+.lost-header {
+  background: linear-gradient(90deg, #0d9db6);
+  padding: 15px;
+  text-align: center;
+}
+
+.lost-title {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ===============================
+   FORM WRAPPER
+=================================*/
+.lost-form-wrapper {
+  flex: 1;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* Blur effect */
+.lost-form-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ===============================
+   FORM CARD
+=================================*/
+.lost-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===============================
+   BUTTONS
+=================================*/
+.btn-gradient {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+
+.btn-outline-light {
+  border-radius: 10px;
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+.lost-footer {
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+}
+
+/* Return Button Style */
+.btn-return {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+
+.btn-return:hover {
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* PAGE BACKGROUND */
+/* PAGE BACKGROUND */
+.lost-list-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Blurred Background Layer */
+.lost-list-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);       /* Adjust blur here */
+  transform: scale(1.05);  /* Prevent edge cutting */
+  z-index: 0;
+}
+
+
+.lost-list-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* STUDENT HEADER */
+.student-header {
+  background-color: #0d9db6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(9, 113, 154, 0.2);
+}
+
+/* ADMIN HEADER */
+.admin-header {
+  background-color: #0d9db6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* TABLE SHADOW */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* FOOTER */
+.lost-footer {
+  margin-top: auto;
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: 11px;
+}
+
+
+
+
+
+/* ===============================
+   FULL PAGE BACKGROUND
+=================================*/
+.found-bg {
+  min-height: 100vh;
+  background-image: url("/publicimage/Campus.png"); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Blur + Dark Overlay */
+.found-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+.found-header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  background-color: #0d9db6;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   CENTER CARD
+=================================*/
+.found-card {
+  position: relative;
+  z-index: 1;
+  background: #f5f5f5;
+  width: 500px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   FORM GROUP
+=================================*/
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.form-group input:focus {
+  border-color: #7b5cff;
+  box-shadow: 0 0 6px rgba(123, 92, 255, 0.4);
+}
+
+/* ===============================
+   BUTTON GROUP
+=================================*/
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* Gradient Buttons */
+.gradient-btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff5f9e, #7b5cff);
+  transition: 0.3s ease;
+}
+
+/* Hover Animation */
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+.found-footer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+  color: white;
+  background-color: #0d9db6;
+  margin-top: auto;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=================================*/
+@media (max-width: 768px) {
+  .found-card {
+    padding: 25px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gradient-btn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ===============================
+   PAGE STRUCTURE
+=================================*/
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===============================
+   HEADER
+=================================*/
+.form-header {
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   FOOTER
+=================================*/
+.form-footer {
+  background-color: #0d9db6;
+  color: white;
+  text-align: center;
+  padding: 9px;
+  font-size: 11px;
+  margin-top: auto;
+}
+
+/* ===============================
+   BACKGROUND SECTION
+=================================*/
+.form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Image */
+.form-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/publicimage/Campus.png"); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+.form-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* ===============================
+   FORM CARD
+=================================*/
+.form-card {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 35px;
+  border-radius: 15px;
+  width: 450px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d9db6;
+  font-weight: 600;
+}
+
+/* ===============================
+   FORM LAYOUT
+=================================*/
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===============================
+   INPUT STYLING
+=================================*/
+.modern-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.modern-input:focus {
+  border-color: #0d9db6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(13, 157, 182, 0.4);
+}
+
+/* ===============================
+   BUTTONS
+=================================*/
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  background-color: #0d9db6;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #8ed6e3;
+}
+
+.secondary-btn {
+  background-color: #8ed6e3;
+  border: 1px solid #ccc;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #8ed6e3;
+}
+
+/* ===============================
+   ERROR & SUCCESS
+=================================*/
+.error-text {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.success-box {
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+
+
+
+
+/* ===============================
+   PAGE LAYOUT
+=================================*/
+.lost-list-page{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(to right,#f8f9fa,#e3f2fd);
+  font-family:Segoe UI, sans-serif;
+}
+
+
+/* ===============================
+   HEADER
+=================================*/
+.student-header{
+  background-color:#0d9db6;
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-weight:bold;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.student-header h2{
+  margin:0;
+}
+
+
+/* ===============================
+   TABLE SECTION
+=================================*/
+.lost-list-container{
+  padding:25px;
+}
+
+.table{
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.table th{
+  text-align:center;
+}
+
+.table td{
+  text-align:center;
+  vertical-align:middle;
+}
+
+.table-hover tbody tr:hover{
+  background:#f1fbfd;
+}
+
+
+/* ===============================
+   STATUS COLORS
+=================================*/
+.status-returned{
+  color:#0d9db6;
+  font-weight:bold;
+}
+
+.status-available{
+  color:#dc3545;
+  font-weight:bold;
+}
+
+
+/* ===============================
+   RETURN BUTTON
+=================================*/
+.btn-gradient{
+  background-color:#0d9db6;
+  color:white;
+  border:none;
+  padding:8px 20px;
+  border-radius:6px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn-gradient:hover{
+  background-color:#0b869c;
+  color:white;
+}
+
+
+/* ===============================
+   BACKGROUND IMAGE SECTION
+=================================*/
+.student-image-section{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+.student-image-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("/publicimage/Campus.png");
+  background-size:cover;
+  background-position:center;
+  filter:blur(3px);
+  transform:scale(1.05);
+}
+
+
+/* ===============================
+   FOOTER
+=================================*/
+.lost-footer{
+  background-color:#0d9db6;
+  color:white;
+  text-align:center;
+  padding:12px;
+  margin-top:auto;
+}
+
+
