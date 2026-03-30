@@ -12,6 +12,7 @@ import FoundItemReport from './Components/ItemComponent/FoundItemReport.jsx';
 import MatchItemSearch from './Components/ItemComponent/MatchItemSearch.jsx';
 import ChatMessage from './Components/ChatComponent/ChatMessage.jsx';
 import StudentReport from './Components/LoginComponent/StudentReport.jsx';
+import ShowStudent from './Components/LoginComponent/ShowStudent.jsx';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/search/:pid' element={<MatchItemSearch />} />
           <Route path='/chatting' element={<ChatMessage />} />
           <Route path='/student-repo' element={<StudentReport />} />
+          <Route path='/student-show' element={<ShowStudent />} />
 
         </Routes>
       </BrowserRouter>

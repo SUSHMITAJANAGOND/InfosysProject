@@ -36,7 +36,7 @@ const StudentMenu=()=>{
           <Nav className="mx-auto">
 
             <NavDropdown title="Personal" id="personal-dropdown">
-              <NavDropdown.Item>Personal Details</NavDropdown.Item>
+              <NavDropdown.Item href="student-show">Personal Details</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Lost Item" id="lost-dropdown">
