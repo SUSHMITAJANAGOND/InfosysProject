@@ -25,35 +25,62 @@ setStudentRecord();
 const returnBack=()=>{
 navigate('/student-menu');
 }
+return (
+  <div className="page-layout">
 
-return(
-        <div className="text-center">
-         <div>
-           <h2 className="text-center">Student Personal Details</h2>
-           <div className = "row">
-             <table className = "table table-striped table-bordered">
-               <tbody>
-                 <tr>
-                   <td class="col-4">User Id:</td>
-                   <td class="col-4">{lostFoundUser.username}</td>
-                  </tr>
-                  <tr>
-                   <td class="col-4">Personal Name:</td>
-                   <td class="col-4">{lostFoundUser.personalName}</td>
-                  </tr>
-                  <tr>
-                   <td class="col-4">Email:</td>
-                   <td class="col-4">{lostFoundUser.email}</td>
-                 </tr>
-               </tbody>
-               
-          </table>  
-         <div>
-          <button style={{marginLeft: "10px"}} onClick={()=>returnBack()} className="btn btn-success">Return</button>
-         </div>        
-         </div>
+    {/* HEADER */}
+    <div className="app-header">
+      <h2>Student Personal Details</h2>
+    </div>
+
+    {/* BACKGROUND IMAGE SECTION */}
+    <div className="image-section">
+
+      {/* CONTENT */}
+      <div className="content-container text-center">
+
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+
+            <table className="table table-striped table-bordered">
+              <tbody>
+                <tr>
+                  <td className="col-6 fw-bold">User Id:</td>
+                  <td className="col-6">{lostFoundUser.username}</td>
+                </tr>
+
+                <tr>
+                  <td className="col-6 fw-bold">Personal Name:</td>
+                  <td className="col-6">{lostFoundUser.personalName}</td>
+                </tr>
+
+                <tr>
+                  <td className="col-6 fw-bold">Email:</td>
+                  <td className="col-6">{lostFoundUser.email}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button
+              style={{ marginTop: "10px" }}
+              onClick={returnBack}
+              className="btn-gradient"
+            >
+              Return
+            </button>
+
+          </div>
         </div>
-       </div>
-     );
+
+      </div>
+    </div>
+
+    {/* FOOTER */}
+    <div className="app-footer">
+      © 2026 Lost & Found Locator | All Rights Reserved
+    </div>
+
+  </div>
+);
 }
 export default ShowStudent;

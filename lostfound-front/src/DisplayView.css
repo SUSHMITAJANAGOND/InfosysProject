@@ -1029,3 +1029,275 @@ body {
 }
 
 
+
+
+
+
+
+
+/* ===============================
+   PAGE LAYOUT
+=================================*/
+.page-layout{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(to right,#f8f9fa,#e3f2fd);
+  font-family:Segoe UI, sans-serif;
+}
+
+
+/* ===============================
+   HEADER
+=================================*/
+.app-header{
+  background-color:#0d9db6;
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-weight:bold;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.app-header h2{
+  margin:0;
+}
+
+
+/* ===============================
+   CONTENT SECTION
+=================================*/
+.content-container{
+  padding:25px;
+  z-index:2;
+  position:relative;
+}
+
+
+/* ===============================
+   TABLE STYLE
+=================================*/
+.table{
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.table th{
+  text-align:center;
+}
+
+.table td{
+  text-align:center;
+  vertical-align:middle;
+}
+
+.table-hover tbody tr:hover{
+  background:#f1fbfd;
+}
+
+
+/* ===============================
+   STATUS COLORS
+=================================*/
+.status-returned{
+  color:#0d9db6;
+  font-weight:bold;
+}
+
+.status-available{
+  color:#dc3545;
+  font-weight:bold;
+}
+
+
+/* ===============================
+   BUTTON
+=================================*/
+.btn-gradient{
+  background-color:#0d9db6;
+  color:white;
+  border:none;
+  padding:8px 20px;
+  border-radius:6px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn-gradient:hover{
+  background-color:#0b869c;
+  color:white;
+}
+
+
+/* ===============================
+   BACKGROUND IMAGE SECTION
+=================================*/
+.image-section{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+.image-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("/publicimage/Campus.png"); /* same image */
+  background-size:cover;
+  background-position:center;
+  filter:blur(3px);
+  transform:scale(1.05);
+  z-index:0;
+}
+
+
+/* ===============================
+   FOOTER
+=================================*/
+.app-footer{
+  background-color:#0d9db6;
+  color:white;
+  text-align:center;
+  padding:6px;
+  margin-top:auto;
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   PAGE LAYOUT
+=================================*/
+.page-layout{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(to right,#f8f9fa,#e3f2fd);
+  font-family:Segoe UI, sans-serif;
+}
+
+
+/* ===============================
+   HEADER
+=================================*/
+.app-header{
+  background-color:#0d9db6;
+  color:white;
+  padding:20px;
+  text-align:center;
+  font-weight:bold;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.app-header h2{
+  margin:0;
+  letter-spacing:0.5px;
+}
+
+
+/* ===============================
+   BACKGROUND IMAGE SECTION
+=================================*/
+.image-section{
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+
+.image-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("/publicimage/Campus.png");
+  background-size:cover;
+  background-position:center;
+  filter:blur(3px);
+  transform:scale(1.05);
+  z-index:0;
+}
+
+
+/* ===============================
+   CONTENT
+=================================*/
+.content-container{
+  position:relative;
+  z-index:2;
+  padding:30px;
+}
+
+
+/* ===============================
+   TABLE STYLE
+=================================*/
+.table{
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.table th{
+  text-align:center;
+  background-color:#0d9db6;
+  color:white;
+}
+
+.table td{
+  text-align:center;
+  vertical-align:middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+  background-color:#f9fcfd;
+}
+
+.table-hover tbody tr:hover{
+  background:#e6f7fb;
+}
+
+
+/* ===============================
+   BUTTONS
+=================================*/
+.btn-gradient{
+  background-color:#0d9db6;
+  color:white;
+  border:none;
+  padding:8px 20px;
+  border-radius:6px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn-gradient:hover{
+  background-color:#0b869c;
+  color:white;
+}
+
+
+/* DELETE BUTTON IMPROVEMENT */
+.btn-danger{
+  border-radius:6px;
+  font-weight:500;
+}
+
+
+/* ===============================
+   FOOTER
+=================================*/
+.app-footer{
+  background-color:#0d9db6;
+  color:white;
+  text-align:center;
+  padding:10px;
+  margin-top:auto;
+  font-size:14px;
+}
+
+
