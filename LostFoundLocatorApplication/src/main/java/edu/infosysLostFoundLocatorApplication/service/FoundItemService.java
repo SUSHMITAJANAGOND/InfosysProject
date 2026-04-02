@@ -23,7 +23,7 @@ public class FoundItemService {
 
     public String generateFoundItemId() {
 		String newId="";
-		String id=dao.getFoundId();
+		String id=dao.getLastId();
 		if(id==null) {
 			newId="F100001";
 		}

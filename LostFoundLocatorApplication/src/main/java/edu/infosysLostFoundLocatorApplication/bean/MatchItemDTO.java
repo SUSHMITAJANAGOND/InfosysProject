@@ -1,6 +1,7 @@
 package edu.infosysLostFoundLocatorApplication.bean;
 
-
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
 
 public class MatchItemDTO {
 

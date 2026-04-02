@@ -5,6 +5,7 @@ import java.util.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -13,7 +14,8 @@ public class LostfoundUser extends User {
 	@Id
 	private String username;
     private String password;
-    private String personlName;
+    @Column(name = "personal_name")
+    private String personalName;
     private String email;
     private String role;
 	public LostfoundUser() {
@@ -21,11 +23,11 @@ public class LostfoundUser extends User {
 		// TODO Auto-generated constructor stub
 	}
 	public LostfoundUser(String username, String password, Collection<? extends GrantedAuthority> authorities,
-			String username2, String personlName2,String email2, String password2, String role2) {
+			String username2, String personalName2,String email2, String password2, String role2) {
 		super(username, password, authorities);
 		this.username = username2;
 		this.password = password2;
-		this.personlName = personlName2;
+		this.personalName = personalName2;
 		this.email = email2;
 		this.role = role2;
 	}
@@ -42,11 +44,11 @@ public class LostfoundUser extends User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getPersonlName() {
-		return personlName;
+	public String getPersonalName() {
+		return personalName;
 	}
-	public void setPersonlName(String personlName) {
-		this.personlName = personlName;
+	public void setPersonalName(String personalName) {
+		this.personalName = personalName;
 	}
 	public String getEmail() {
 		return email;

@@ -1,41 +1,50 @@
-
 package edu.infosysLostFoundLocatorApplication.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import edu.infosysLostFoundLocatorApplication.bean.MatchItem;
 import edu.infosysLostFoundLocatorApplication.bean.MatchItemId;
 
+
+
+@Service
 @Repository
-public class MatchItemDaoImpl implements MatchItemDao {
+public class MatchItemDaoImpl implements MatchItemDao{
+	
+	@Autowired
+	private MatchItemRepository matchRepository;
+	
+	@Override
+	public MatchItem saveMatchItem(MatchItem matchItem) {
+		// TODO Auto-generated method stub
+		return matchRepository.save(matchItem);
+	}
+	@Override
+	public List<MatchItem> getAllMatchItems() {
+		// TODO Auto-generated method stub
+		return matchRepository.findAll();
+	}
 
-    @Autowired
-    private MatchItemRepository matchItemRepository;
+/*	@Override
+	 public MatchItem getMatchItemById(MatchItemId matchItemId) {
+        Optional<MatchItem> optional = matchRepository.findById(matchItemId);
+        return optional.orElse(null); // or throw custom exception
+    }*/
 
-    // Save Match Item
-    @Override
-    public void saveMatchItem(MatchItem matchItem) {
-        matchItemRepository.save(matchItem);
-    }
+	
 
-    // Get All Match Items
-    @Override
-    public List<MatchItem> getAllMatchItems() {
-        return matchItemRepository.findAll();
-    }
+/*	@Override
+	public void deleteMatchItem(MatchItemId matchItemId) {
+		// TODO Auto-generated method stub
+		matchRepository.deleteById(matchItemId);
+		
+	}*/
 
-    // Get Match Item By ID
-   // @Override
-    //public MatchItem getMatchItemById(MatchItemId matchItemId) {
-       // return matchItemRepository.findById(matchItemId).orElse(null);
-    //}
+	
 
-    // Delete Match Item
-   // @Override
-    //public void deleteMatchItemById(MatchItemId matchItemId) {
-        //matchItemRepository.deleteById(matchItemId);
-   }
-
+}
