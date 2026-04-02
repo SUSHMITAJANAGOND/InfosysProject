@@ -40,9 +40,9 @@ const AdminMenu=()=>{
             </NavDropdown>
 
             <NavDropdown title="Items" id="items-dropdown">
-              <NavDropdown.Item href="found-list">Found Item List</NavDropdown.Item>
+              <NavDropdown.Item href="/found-list">Found Item List</NavDropdown.Item>
               <NavDropdown.Item href="/lost-list">Lost Item List</NavDropdown.Item>
-              <NavDropdown.Item href="search">Match Item List</NavDropdown.Item>
+              <NavDropdown.Item href="/match-list">Match Item List</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link onClick={() => navigate("/chatting")}>

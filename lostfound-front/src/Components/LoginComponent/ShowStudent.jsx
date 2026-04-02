@@ -50,7 +50,7 @@ return (
                 </tr>
 
                 <tr>
-                  <td className="col-6 fw-bold">Personal Name:</td>
+                <td className="col-6 fw-bold">Personal Name:</td>
                   <td className="col-6">{lostFoundUser.personalName}</td>
                 </tr>
 

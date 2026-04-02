@@ -11,6 +11,7 @@ const StudentReport=()=>{
 
     const setAllStudents=()=>{
         getAllStudents().then((response)=>{
+          console.log("API DATA",response.data);
             setLostFoundUser(response.data);
         });
     }
@@ -25,7 +26,7 @@ const StudentReport=()=>{
 
     const removeStudent=(id)=>{
         deleteUser(id).then(response => {
-            let remainStudents=lostFoundUser.filter((student)=>(getAllStudents.username !== id));
+            let remainStudents=lostFoundUser.filter((student)=>(student.username !== id));
             setLostFoundUser(remainStudents);
             navigate('/student-repo');
         });
