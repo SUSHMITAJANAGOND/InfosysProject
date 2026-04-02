@@ -49,12 +49,11 @@ return (
       {/* CONTENT */}
       <div className="content-container text-center">
 
-        {/* TABLE SECTION */}
-        <div style={{
-          backgroundColor: "rgba(255,255,255,0.9)",
-          padding: "20px",
-          borderRadius: "10px"
-        }}>
+        {/* SECTION BOX */}
+        <div className="section-box">
+
+          {/* TITLE (THIS WAS MISSING) */}
+          <h3 className="section-title">Matched Item List</h3>
 
           <div className="row">
             <table className="table table-striped table-bordered table-hover">
@@ -110,7 +109,6 @@ return (
 
   </div>
 );
-
 
 };
 

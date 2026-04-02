@@ -83,112 +83,111 @@ return (
       {/* CONTENT */}
       <div className="content-container text-center">
 
-        {/* ✅ BACKGROUND WRAPPER START */}
-    <div style={{
-      backgroundColor: "rgba(255,255,255,0.9)",
-      padding: "20px",
-      borderRadius: "10px",
-      marginBottom: "20px"
-    }}></div>
+        {/* ================= LOST ITEM SECTION ================= */}
+        <div style={{
+          backgroundColor: "rgba(255,255,255,0.95)",
+          padding: "20px",
+          borderRadius: "10px",
+          marginBottom: "25px"
+        }}>
 
-        {/* LOST ITEM */}
-        <h3>Student's Lost Item</h3>
+          <h3>Student's Lost Item</h3>
 
-        <div className="row">
-          <table className="table table-striped table-bordered table-hover">
-            <thead>
-              <tr>
-                <th>Item Id</th>
-                <th>Item Name</th>
-                <th>Category</th>
-                <th>Color</th>
-                <th>Brand</th>
-                <th>Location</th>
-                <th>Lost Date</th>
-                <th>User Id</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+          <div className="row">
+            <table className="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Item Id</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Color</th>
+                  <th>Brand</th>
+                  <th>Location</th>
+                  <th>Lost Date</th>
+                  <th>User Id</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
 
-            <tbody>
-              <tr>
-                <td>{lostItem.lostItemId}</td>
-                <td>{lostItem.lostItemName}</td>
-                <td>{lostItem.category}</td>
-                <td>{lostItem.color}</td>
-                <td>{lostItem.brand}</td>
-                <td>{lostItem.location}</td>
-                <td>{lostItem.lostDate}</td>
-                <td>{lostItem.username}</td>
-                <td>Not Found</td>
-              </tr>
-            </tbody>
-          </table>
+              <tbody>
+                <tr>
+                  <td>{lostItem.lostItemId}</td>
+                  <td>{lostItem.lostItemName}</td>
+                  <td>{lostItem.category}</td>
+                  <td>{lostItem.color}</td>
+                  <td>{lostItem.brand}</td>
+                  <td>{lostItem.location}</td>
+                  <td>{lostItem.lostDate}</td>
+                  <td>{lostItem.username}</td>
+                  <td>Not Found</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
 
-        <br />
+        {/* ================= FOUND ITEMS SECTION ================= */}
+        <div style={{
+          backgroundColor: "rgba(255,255,255,0.95)",
+          padding: "20px",
+          borderRadius: "10px"
+        }}>
 
-        {/* FOUND ITEMS */}
+          <h3>Probable Matching Found Item List</h3>
+          <hr style={{ height: "3px", backgroundColor: "red" }} />
 
-
-<div style={{
-  backgroundColor: "rgba(255,255,255,0.9)",
-  padding: "20px",
-  borderRadius: "10px"
-}}></div>
-
-        <h3>Probable Matching Found Item List</h3>
-        <hr style={{ height: "3px", backgroundColor: "red" }} />
-
-        <div className="row">
-          <table className="table table-striped table-bordered table-hover">
-            <thead>
-              <tr>
-                <th>Item Id</th>
-                <th>Item Name</th>
-                <th>Category</th>
-                <th>Color</th>
-                <th>Brand</th>
-                <th>Location</th>
-                <th>Found Date</th>
-                <th>User Id</th>
-                <th>Status</th>
-                <th>Select</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {foundItemDTOList.map((item) => (
-                <tr key={item.foundItemId}>
-                  <td>{item.foundItemId}</td>
-                  <td>{item.foundItemName}</td>
-                  <td>{item.category}</td>
-                  <td>{item.color}</td>
-                  <td>{item.brand}</td>
-                  <td>{item.location}</td>
-                  <td>{item.foundDate}</td>
-                  <td>{item.username}</td>
-                  <td>Not Returned</td>
-
-                  <td>
-                    <button
-                      className="btn btn-warning"
-                      onClick={() =>
-                        claimItem(item.foundItemId, item.username)
-                      }
-                    >
-                      Claim
-                    </button>
-                  </td>
+          <div className="row">
+            <table className="table table-striped table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Item Id</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Color</th>
+                  <th>Brand</th>
+                  <th>Location</th>
+                  <th>Found Date</th>
+                  <th>User Id</th>
+                  <th>Status</th>
+                  <th>Select</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {foundItemDTOList.map((item) => (
+                  <tr key={item.foundItemId}>
+                    <td>{item.foundItemId}</td>
+                    <td>{item.foundItemName}</td>
+                    <td>{item.category}</td>
+                    <td>{item.color}</td>
+                    <td>{item.brand}</td>
+                    <td>{item.location}</td>
+                    <td>{item.foundDate}</td>
+                    <td>{item.username}</td>
+                    <td>Not Returned</td>
+
+                    <td>
+                      <button
+                        className="btn btn-warning"
+                        onClick={() =>
+                          claimItem(item.foundItemId, item.username)
+                        }
+                      >
+                        Claim
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
         </div>
 
         {/* BUTTON */}
         <button
-          style={{ marginTop: "10px" }}
+          style={{ marginTop: "15px" }}
           onClick={returnBack}
           className="btn-gradient"
         >
@@ -212,7 +211,6 @@ return (
 
   </div>
 );
-
 
 };
 
